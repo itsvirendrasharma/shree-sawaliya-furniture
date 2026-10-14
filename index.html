@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Shree Sawaliya Furniture</title>
+    <meta name="description"
+        content="Beds, sofas, wardrobes, dining sets, tables and chairs at the lowest prices. Order online.">
+    <meta name="theme-color" content="#1E2A4A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a class="skip" href="#view" data-i18n="skip">Skip to content</a>
+
+    <!-- Today's offer strip (shown on phones; on laptops the offer sits in the side menu) -->
+    <div class="ticker" id="ticker" role="note"><span id="tickerText"></span></div>
+
+    <header class="topbar" id="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" data-act="openMenu" data-i18n-aria="menu"
+            aria-controls="sidebar" aria-expanded="false" data-icon="menu"></button>
+
+        <a class="brand" href="#/home">
+            <span class="logo" aria-hidden="true">SS</span>
+            <span class="brand-text"><b id="brandMain">Shree Sawaliya</b><small id="brandSub">Furniture</small></span>
+        </a>
+
+        <form class="search" id="searchForm" role="search">
+            <input id="searchInput" name="q" type="search" autocomplete="off" enterkeyhint="search"
+                data-i18n-ph="search" data-i18n-aria="search">
+            <button type="submit" data-i18n-aria="search" data-icon="search"></button>
+        </form>
+
+        <div class="lang" role="group" aria-label="Language">
+            <button type="button" data-lang="hi" lang="hi">हिं</button>
+            <button type="button" data-lang="en">Eng</button>
+        </div>
+
+        <button class="icon-btn cart-btn" type="button" data-act="openCart" data-i18n-aria="cart" data-icon="cart">
+            <span class="cart-count" hidden>0</span>
+        </button>
+
+        <button class="admin-btn" id="adminBtn" type="button" data-act="adminBtn"><span class="dot"></span><span
+                id="adminBtnText" data-i18n="adminCaps">ADMIN</span></button>
+    </header>
+
+    <div class="shell">
+        <aside class="sidebar" id="sidebar" aria-label="Menu">
+            <div class="side-head">
+                <span class="brand-lite" id="sideBrand">Shree Sawaliya Furniture</span>
+                <button class="icon-btn dark" type="button" data-act="closeAll" data-i18n-aria="close"
+                    data-icon="close"></button>
+            </div>
+            <nav id="nav" class="nav"></nav>
+            <div class="side-foot">
+                <div class="side-offer" id="sideOffer"></div>
+                <div class="side-contact" id="sideContact"></div>
+            </div>
+        </aside>
+
+        <div class="content-wrap">
+            <main id="view" tabindex="-1"></main>
+            <footer class="footer" id="footer"></footer>
+        </div>
+    </div>
+
+    <nav class="bottomnav" id="bottomnav" aria-label="Quick menu"></nav>
+
+    <div class="scrim" id="scrim" data-act="closeAll"></div>
+
+    <aside class="drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Cart" aria-hidden="true"></aside>
+
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="sheet" id="sheet" tabindex="-1"></div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <noscript>
+        <p style="padding:24px;font-family:sans-serif">Please turn on JavaScript to use this website.</p>
+    </noscript>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
